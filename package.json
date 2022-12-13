@@ -1,7 +1,7 @@
 {
     "name": "api-extend-hdbank",
     "version": "1.0.0",
-    "main": "app.js",
+    "main": "index.js",
     "author": "quoctron",
     "license": "MIT",
     "scripts": {
