@@ -1,0 +1,488 @@
+{
+	"info": {
+		"_postman_id": "aff7fecf-8497-45cc-9e51-c3933280fa34",
+		"name": "HD Bank",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19836295"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Get Key",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "access-token",
+								"value": "eyJraWQiOiJXcDRGMndiQVpMa1d2WWgyNDhnYjNtUHBLRzZTdDRNcG85Tmc3U2diZ2E0PSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiI2ZjhmODIwMS04MWZlLTRhOGItOTE1MC0xZjk0YzgwODVkMDIiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLmFwLXNvdXRoZWFzdC0xLmFtYXpvbmF3cy5jb21cL2FwLXNvdXRoZWFzdC0xX1FiMVE4VFBzVSIsImNvZ25pdG86dXNlcm5hbWUiOiI2ZjhmODIwMS04MWZlLTRhOGItOTE1MC0xZjk0YzgwODVkMDIiLCJvcmlnaW5fanRpIjoiMDAxOTAzMGEtOTEzMi00YzAwLWEzZTUtMjFmYmQ3YWJjZDA1IiwiYXVkIjoic2lrY25laTR0MmgzbnRrcWo1ZDQ5bHR2ciIsImV2ZW50X2lkIjoiMjdhMGFlYjEtZDgxZC00ODM5LWFhMDAtYTQ0ZDllMWI1NTdkIiwidG9rZW5fdXNlIjoiaWQiLCJhdXRoX3RpbWUiOjE2NjkxODU5NjMsIm5hbWUiOiJOZ3V54buFbiBRdeG7kWMgVHLhu41uIiwiZXhwIjoxNjY5NjQ5NDI4LCJpYXQiOjE2Njk1NjMwMjgsImp0aSI6ImZiM2Y4ZmEyLWI3ZTgtNDU2ZS04M2UwLTI4NDM4OWJlODc4YSIsImVtYWlsIjoicXVvY3Ryb24uMjAwOTAxQGdtYWlsLmNvbSJ9.NBMwktXeWbQ-VHTK1I1kaTKOaSEmuhGYckqQT8u83rLdElZsjmxTNUP6TWSecaNGb_EL2yJcoLPFdyUR3HUfagtEbWspg-R5KIAOCMBjhd7wMSV1I5EjJwV_J4WkDAseCDQwoCxa7f9BwUsu7mlmp2Qsxdd99y4lJnCqi98j0el8K71CsLHMCXkLNnHDARs_D2NE9ITRubonBpsf2DedFBPj5shNHHBxXSzkBbcjRmLKBu37CoEsRK5aZaXmP0KvJPZjcs1xxm5RrxDFPvFrREUfhLfnWDjbTe3oO9WhQ3tqzQfnAfziHRRDtmBht9PUuSPx5AdZrQSylCcO7vYNlQ"
+							},
+							{
+								"key": "x-api-key",
+								"value": "hutech_hackathon@123456"
+							}
+						],
+						"url": {
+							"raw": "https://7ucpp7lkyl.execute-api.ap-southeast-1.amazonaws.com/dev/get_key",
+							"protocol": "https",
+							"host": [
+								"7ucpp7lkyl",
+								"execute-api",
+								"ap-southeast-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"get_key"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"quoctron@gmail.com.vn\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{endpoint}}users",
+							"host": [
+								"{{endpoint}}users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Save Account Transfer",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"accountNo\":\"045840070000012\",\r\n    \"idUserTransfer\":\"638cdf58e0e59c38da924cb1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{endpoint}}users/save",
+							"host": [
+								"{{endpoint}}users"
+							],
+							"path": [
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Accounts Transfer",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{endpoint}}users/account-transfer/638cdf58e0e59c38da924cb1",
+							"host": [
+								"{{endpoint}}users"
+							],
+							"path": [
+								"account-transfer",
+								"638cdf58e0e59c38da924cb1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "access-token",
+								"value": "eyJraWQiOiJXcDRGMndiQVpMa1d2WWgyNDhnYjNtUHBLRzZTdDRNcG85Tmc3U2diZ2E0PSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiI2ZjhmODIwMS04MWZlLTRhOGItOTE1MC0xZjk0YzgwODVkMDIiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLmFwLXNvdXRoZWFzdC0xLmFtYXpvbmF3cy5jb21cL2FwLXNvdXRoZWFzdC0xX1FiMVE4VFBzVSIsImNvZ25pdG86dXNlcm5hbWUiOiI2ZjhmODIwMS04MWZlLTRhOGItOTE1MC0xZjk0YzgwODVkMDIiLCJvcmlnaW5fanRpIjoiMDAxOTAzMGEtOTEzMi00YzAwLWEzZTUtMjFmYmQ3YWJjZDA1IiwiYXVkIjoic2lrY25laTR0MmgzbnRrcWo1ZDQ5bHR2ciIsImV2ZW50X2lkIjoiMjdhMGFlYjEtZDgxZC00ODM5LWFhMDAtYTQ0ZDllMWI1NTdkIiwidG9rZW5fdXNlIjoiaWQiLCJhdXRoX3RpbWUiOjE2NjkxODU5NjMsIm5hbWUiOiJOZ3V54buFbiBRdeG7kWMgVHLhu41uIiwiZXhwIjoxNjcwMjI0MjQ1LCJpYXQiOjE2NzAxMzc4NDUsImp0aSI6ImMzM2NmMmU0LWI1OWUtNDE2NS1iYTYyLTBmNDRmYzQ0ODljZSIsImVtYWlsIjoicXVvY3Ryb24uMjAwOTAxQGdtYWlsLmNvbSJ9.ZfarElJR3JG9SSn2DhClfMT2upXeUZvoHsSGRC2Hry_L7hZvWTtZZPH9bbGoIE6HqHVxdGBHs6ofZ-vYn4rhE3q-52fPAvr8DacU8kjLQO7TqUgSIVbI6c1dOHeyhW1Ul1z7TOTKDLPpZrIBrPbWUKe3TJh0J0t6aGCLooM4vg8u3re3ZsJ5NHe-iChOXYVqp8kAaKIcnrxh4QiN_htfzK_bVkV_IoMimxcXqYNnsq5rHIkVbpocJGtd50PJKfR-XiuITpZlv2MxbjpPDRMrh-ObiMni6gDK9RpHLeuVzA1jdevIkfYKwaU1SVVcVGuuiw-Kw8b3x2hrp1SuLaUqCA"
+							},
+							{
+								"key": "x-api-key",
+								"value": "hutech_hackathon@123456"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"data\": {\n    \"credential\": \"F6wYzRq+fzo2Eb9jxH/XwdrwplvHKn1sc3Pxefa3CtUJMJhqauicA1ZCF9J7nhwAYmnG/paH5G/lT1QbARPXgJE2/JmmSeKE2TSZ9pU46vDSIuBsNtGvBc/TcI2GPu2ABQjV4AXZph0CEAFx6nGeatRd5IiVC78cni3Msx7LhZQ=\",\n    \"key\": \"MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCDY1DzbqoavP8UVPYARHpy+zPlaFiBdf3imr5m4RdbHCwMueevk+NoWV2dqL/LBnk8oWMqWkgMDnTleXe/jvj6zQEuuCoBVDiZq4k0JXbHdTmXg0/fH7d9YD0BsSkpSJH8A9RBSnjvIzKLNHXKTUyxG1QIIKbU2lhVAB/jK2UtdwIDAQAB\"\n  },\n  \"request\": {\n    \"requestId\": \"a7ea23df-7468-439d-9b12-26eb4a760901\",\n    \"requestTime\": \"1667200102200\"\n  }\n}"
+						},
+						"url": {
+							"raw": "https://7ucpp7lkyl.execute-api.ap-southeast-1.amazonaws.com/dev/login",
+							"protocol": "https",
+							"host": [
+								"7ucpp7lkyl",
+								"execute-api",
+								"ap-southeast-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register HDBANK",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"credential\": \"F6wYzRq+fzo2Eb9jxH/XwdrwplvHKn1sc3Pxefa3CtUJMJhqauicA1ZCF9J7nhwAYmnG/paH5G/lT1QbARPXgJE2/JmmSeKE2TSZ9pU46vDSIuBsNtGvBc/TcI2GPu2ABQjV4AXZph0CEAFx6nGeatRd5IiVC78cni3Msx7LhZQ=\",\r\n    \"email\": \"quoctron@gmail.com.vn\",\r\n    \"fullName\": \"Nguyen Quoc Tron\",\r\n    \"identityNumber\": \"225753433\",\r\n    \"phone\": \"0376951201\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{endpoint}}users/",
+							"host": [
+								"{{endpoint}}users"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Refresh Token",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "client_id",
+									"value": "sikcnei4t2h3ntkqj5d49ltvr",
+									"type": "text"
+								},
+								{
+									"key": "grant_type",
+									"value": "refresh_token",
+									"type": "text"
+								},
+								{
+									"key": "refresh_token",
+									"value": "eyJjdHkiOiJKV1QiLCJlbmMiOiJBMjU2R0NNIiwiYWxnIjoiUlNBLU9BRVAifQ.UXI2FkQwpbKGHdX67r3QlJgsxVTFDvTCnv1_XmUsfVE3Nctj8bW3dpVFwJEFBVY50qg0AAk03vZl5K9e-tApXB6P9SkUiFRTq8lCl409cbcmicTRi6vyclHdKrRxw93F4IOjrUW0JfrEktsZsuSne8mdiEVggzph0G1qNRsbD9NakTyaZTBX2aaWzdy5ouVzy36414OM1EHkvIOohsFf0lZhpj02Bmzt8EUtSFni95XywycYQnUK0YiISMh7qOQp7ynrxgS2wT30pUVuMpSmYNper7kT6o4nvaGTTH8Gkfq-bXeBAeK_u-DazLLYKVQvytJbLCgcj9A1IFXFsowwzA.916n7Rs-iS6_fMQo.BCcp2noAb4hKiifC5lWxYdlBtWEteylQsR5_mpg6_DSLFDbqcE8XE-DWdwvRlMo7AMnDnDpnfQ2iBjgjWYZeTBALDduaqwzDzYv8dx86PjSUXKENrYu5MxqCf7QLttjHsh1LGXe0Cy7YtHgw2N1g_ogUFW9UgWNUsBsuLhm15lTPHcyf8VlMpDI1a-CJkNwC94qkScEmtIe7QjMx-lbw0sqmfkuWODnUr4EZ64vuqVGZtKCHj_wxho1rSdOAJnpua4ld8QOoy0lcxwUhaFBlXyLJn2vVOUkRCgILl4Q6cjLmgMEWbpZ6KBjfxTheDMerLmwutRBcpyEsxQEVtL-DygDhzzfG212dY4vzNOUg0fvEemIUBlHOF0WUQRUJyfK6Hw-bqCiSKeRtChROWIJswHuY-acQNYzgmaQACLzrBl6024ZZdEDzzS4TMIn5hEMRp6sifT06-fOxSb3HrqoHl2nvhtImtnyAu1itLyCuNvmuvFp52KAYWgDEHrzsHN2y7s4NNwzRzn5Lwv3Z7Ow0GPqxW8VXuzpGuwp0rmCpwJWPBNn3ECCRPfIC07JSJAo5kIFHuXjnjeUnbR0-3bcETJUAJaQqMdb-fuk8_QNwi8jtgsanhbsi7EtD6VyE9cUXEav8U6s_mAJVqNixsOrW8G3T-F7i4KM2gUdeGOW_XnQP5E_43IK2K5S1csXZd3GNjBt17zYPHAPp7vBq8XAgW2AUj7oT4ek_PRNbUPPbL6vy1OTxcpZ2YJCq8n2POxGK60hy_Zdm21ce29B_VXfXpqRYhR6DeMu19McwwLbHT6d614XPPupWrGTrSxK0V8hzFycZ3vMnw_oiFnGWfV6YJulQkZ8cgjufAvAPTABNjXwUbt6wwLkknVUshN-dFLaOTvbQeb-j5Gsn8XaaJlNmg_7kSPXGai-2Z60AUGjwgM1cQqdfIh3OLDxBZ9Yv9r1Otc5X9G_mx4g5s_91JmcwOOfcNu6Bmx4EDFJX7A8Nr9AcXncGZr_nQ9YQ8SMWt5WbZsz-XRONwY1GUoPujSbLgv_sa8ycBUJFaMK4_k-hqoLHThMDfolowPT0K9MI-mpguwQmGPxhQfz9eL2Myq246V0uFIhvZ_bCyXyS95b1Mat7LYM_bhHGqEof3-dTLx3_Vw3yw4_foufVQ2Va50nymRl52TKlrE034XN1cXkl-N_gSBCCHKu7ntWbQkXhgtc4vcXgPoeSUOcX2yXA3BJiRHZp-eCTbbNBsQuDNHpOlUp48Tt3gVjwku8P122_cZwW_AHWNUXIzj2arjcRS7GL8bNashXix-n8Z31DSwThgyy4u2BD1ZP0_UblMKJo2iVrr9NVNLC6Fg.HvNJmffKKy1n3XQA15xf0Q",
+									"type": "text"
+								},
+								{
+									"key": "test",
+									"value": "{{accToken}}",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "https://hdbank-hackathon.auth.ap-southeast-1.amazoncognito.com/oauth2/token",
+							"protocol": "https",
+							"host": [
+								"hdbank-hackathon",
+								"auth",
+								"ap-southeast-1",
+								"amazoncognito",
+								"com"
+							],
+							"path": [
+								"oauth2",
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "access-token",
+								"value": "eyJraWQiOiJXcDRGMndiQVpMa1d2WWgyNDhnYjNtUHBLRzZTdDRNcG85Tmc3U2diZ2E0PSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiI2ZjhmODIwMS04MWZlLTRhOGItOTE1MC0xZjk0YzgwODVkMDIiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLmFwLXNvdXRoZWFzdC0xLmFtYXpvbmF3cy5jb21cL2FwLXNvdXRoZWFzdC0xX1FiMVE4VFBzVSIsImNvZ25pdG86dXNlcm5hbWUiOiI2ZjhmODIwMS04MWZlLTRhOGItOTE1MC0xZjk0YzgwODVkMDIiLCJvcmlnaW5fanRpIjoiMDAxOTAzMGEtOTEzMi00YzAwLWEzZTUtMjFmYmQ3YWJjZDA1IiwiYXVkIjoic2lrY25laTR0MmgzbnRrcWo1ZDQ5bHR2ciIsImV2ZW50X2lkIjoiMjdhMGFlYjEtZDgxZC00ODM5LWFhMDAtYTQ0ZDllMWI1NTdkIiwidG9rZW5fdXNlIjoiaWQiLCJhdXRoX3RpbWUiOjE2NjkxODU5NjMsIm5hbWUiOiJOZ3V54buFbiBRdeG7kWMgVHLhu41uIiwiZXhwIjoxNjcwMjI0MjQ1LCJpYXQiOjE2NzAxMzc4NDUsImp0aSI6ImMzM2NmMmU0LWI1OWUtNDE2NS1iYTYyLTBmNDRmYzQ0ODljZSIsImVtYWlsIjoicXVvY3Ryb24uMjAwOTAxQGdtYWlsLmNvbSJ9.ZfarElJR3JG9SSn2DhClfMT2upXeUZvoHsSGRC2Hry_L7hZvWTtZZPH9bbGoIE6HqHVxdGBHs6ofZ-vYn4rhE3q-52fPAvr8DacU8kjLQO7TqUgSIVbI6c1dOHeyhW1Ul1z7TOTKDLPpZrIBrPbWUKe3TJh0J0t6aGCLooM4vg8u3re3ZsJ5NHe-iChOXYVqp8kAaKIcnrxh4QiN_htfzK_bVkV_IoMimxcXqYNnsq5rHIkVbpocJGtd50PJKfR-XiuITpZlv2MxbjpPDRMrh-ObiMni6gDK9RpHLeuVzA1jdevIkfYKwaU1SVVcVGuuiw-Kw8b3x2hrp1SuLaUqCA"
+							},
+							{
+								"key": "x-api-key",
+								"value": "hutech_hackathon@123456"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"data\": {\n    \"credential\": \"F6wYzRq+fzo2Eb9jxH/XwdrwplvHKn1sc3Pxefa3CtUJMJhqauicA1ZCF9J7nhwAYmnG/paH5G/lT1QbARPXgJE2/JmmSeKE2TSZ9pU46vDSIuBsNtGvBc/TcI2GPu2ABQjV4AXZph0CEAFx6nGeatRd5IiVC78cni3Msx7LhZQ=\",\n    \"email\": \"quoctron@gmail.com.vn\",\n    \"fullName\": \"Nguyen Quoc Tron\",\n    \"identityNumber\": \"225753433\",\n    \"key\": \"MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCDY1DzbqoavP8UVPYARHpy+zPlaFiBdf3imr5m4RdbHCwMueevk+NoWV2dqL/LBnk8oWMqWkgMDnTleXe/jvj6zQEuuCoBVDiZq4k0JXbHdTmXg0/fH7d9YD0BsSkpSJH8A9RBSnjvIzKLNHXKTUyxG1QIIKbU2lhVAB/jK2UtdwIDAQAB\",\n    \"phone\": \"0376951201\"\n  },\n  \"request\": {\n    \"requestId\": \"a7ea23df-7468-439d-9b12-26eb4a760901\",\n    \"requestTime\": \"1667200102200\"\n  }\n}"
+						},
+						"url": {
+							"raw": "https://7ucpp7lkyl.execute-api.ap-southeast-1.amazonaws.com/dev/register",
+							"protocol": "https",
+							"host": [
+								"7ucpp7lkyl",
+								"execute-api",
+								"ap-southeast-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Transfer",
+			"item": [
+				{
+					"name": "Remit amount",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userIdSender\":\"638cdf58e0e59c38da924cb1\",\r\n    \"accountSender\":\"045840070000012\",\r\n    \"userIdReceiver\":\"638cdf58e0e59c38da924cb1\",\r\n    \"accountReceiver\":\"045840070000012\",\r\n    \"transactionAmount\":20000,\r\n    \"surplusAmount\":780000,\r\n    \"contentTransaction\":\"Gủi tiền\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{endpoint}}transfer",
+							"host": [
+								"{{endpoint}}transfer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Transfers",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Payment",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "access-token",
+								"value": "eyJraWQiOiJXcDRGMndiQVpMa1d2WWgyNDhnYjNtUHBLRzZTdDRNcG85Tmc3U2diZ2E0PSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiI2ZjhmODIwMS04MWZlLTRhOGItOTE1MC0xZjk0YzgwODVkMDIiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLmFwLXNvdXRoZWFzdC0xLmFtYXpvbmF3cy5jb21cL2FwLXNvdXRoZWFzdC0xX1FiMVE4VFBzVSIsImNvZ25pdG86dXNlcm5hbWUiOiI2ZjhmODIwMS04MWZlLTRhOGItOTE1MC0xZjk0YzgwODVkMDIiLCJvcmlnaW5fanRpIjoiMDAxOTAzMGEtOTEzMi00YzAwLWEzZTUtMjFmYmQ3YWJjZDA1IiwiYXVkIjoic2lrY25laTR0MmgzbnRrcWo1ZDQ5bHR2ciIsImV2ZW50X2lkIjoiMjdhMGFlYjEtZDgxZC00ODM5LWFhMDAtYTQ0ZDllMWI1NTdkIiwidG9rZW5fdXNlIjoiaWQiLCJhdXRoX3RpbWUiOjE2NjkxODU5NjMsIm5hbWUiOiJOZ3V54buFbiBRdeG7kWMgVHLhu41uIiwiZXhwIjoxNjcwMzE2ODc1LCJpYXQiOjE2NzAyMzA0NzYsImp0aSI6Ijg5MDM4ODExLTg3MTAtNDIzZi04OTc1LTQ1MDdlOGQ0MWM0OCIsImVtYWlsIjoicXVvY3Ryb24uMjAwOTAxQGdtYWlsLmNvbSJ9.Hw-g1-YIvEND_NlZcAxtmV4QuFqKiobEb8OxBjsGOBQYkN1tNgEop-PllUfRPXjz_l3lF4inGLHmR-5zn1mtrgA7zD5jR4AVJgxcX86L2yxRI5x1MmhDNRmyktskmjB5Hji6XXFm0SnKCfY1IVTrbynKpAwx0YJ6yi_s1Dli0rhbsVeBqO9eygP-Y14_EWqDpiuPzr1kadquL3ZMeGTYO95_HCFaHzqf_fOy-S4tqNf4duVGNelNNA6a_eAljBFJgc7rqW2yP4tjf9wAYg5lyWtLB_-DW4pkBkBvS3jNLLFiq_DsgvEdj15Ep302u8DaNobd_MuZ48IY7p8UowXSOQ"
+							},
+							{
+								"key": "x-api-key",
+								"value": "hutech_hackathon@123456"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"data\": {\n    \"amount\": \"4935000\",\n    \"description\": \"dong hoc phi ky 2/2021 - 2022\",\n    \"fromAcct\": \"045840070000012\",\n    \"sdId\": \"86927\"\n  },\n  \"request\": {\n    \"requestId\": \"a7ea23df-7468-439d-9b12-26eb4a760901\",\n    \"requestTime\": \"1667200102200\"\n  }\n}"
+						},
+						"url": {
+							"raw": "https://7ucpp7lkyl.execute-api.ap-southeast-1.amazonaws.com/dev/payment",
+							"protocol": "https",
+							"host": [
+								"7ucpp7lkyl",
+								"execute-api",
+								"ap-southeast-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"payment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Payment",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "access-token",
+								"value": "eyJraWQiOiJXcDRGMndiQVpMa1d2WWgyNDhnYjNtUHBLRzZTdDRNcG85Tmc3U2diZ2E0PSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiI2ZjhmODIwMS04MWZlLTRhOGItOTE1MC0xZjk0YzgwODVkMDIiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLmFwLXNvdXRoZWFzdC0xLmFtYXpvbmF3cy5jb21cL2FwLXNvdXRoZWFzdC0xX1FiMVE4VFBzVSIsImNvZ25pdG86dXNlcm5hbWUiOiI2ZjhmODIwMS04MWZlLTRhOGItOTE1MC0xZjk0YzgwODVkMDIiLCJvcmlnaW5fanRpIjoiMDAxOTAzMGEtOTEzMi00YzAwLWEzZTUtMjFmYmQ3YWJjZDA1IiwiYXVkIjoic2lrY25laTR0MmgzbnRrcWo1ZDQ5bHR2ciIsImV2ZW50X2lkIjoiMjdhMGFlYjEtZDgxZC00ODM5LWFhMDAtYTQ0ZDllMWI1NTdkIiwidG9rZW5fdXNlIjoiaWQiLCJhdXRoX3RpbWUiOjE2NjkxODU5NjMsIm5hbWUiOiJOZ3V54buFbiBRdeG7kWMgVHLhu41uIiwiZXhwIjoxNjcwNDAyMTgxLCJpYXQiOjE2NzAzMTU3ODEsImp0aSI6IjRhYTA2YTU2LTQzNWQtNDZhMy1iZDNlLTMxZTlhZjZkNzhmMyIsImVtYWlsIjoicXVvY3Ryb24uMjAwOTAxQGdtYWlsLmNvbSJ9.NJX1xf4k7otuWStT0ivAMKeSfnGc7hFg6q0IiqHA_c_R9SkuPfy4Zt4pQDM4L2PxiIG7NTnOLQmxr45nC6PIgSLUItW6AeXJyACVHs2lu8995uzDFi1r7fAqPe1ZDXXPuD5vAWzXrP9Q30XcpZedOZl-JETcAQjfuYcVuq4vwfWoGKL7K_p6RowETLpWrDIBNG29w5U2Ldrce_9ps1w0kkTrPCF1a2D4dDDgCvc3dPhl8ZnsCR16JxwqHj_PeppTdwbflrjMSRcZBHrDqZFqMOkKwSYxlCkG6dd41w-K8xP9sflD7ReaZwIbZedfhyr9FQdF2Er4mnW5YIgNSzd7hQ"
+							},
+							{
+								"key": "x-api-key",
+								"value": "hutech_hackathon@123456"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"data\": {\n    \"sdId\": \"79797\"\n  },\n  \"request\": {\n    \"requestId\": \"a7ea23df-7468-439d-9b12-26eb4a760901\",\n    \"requestTime\": \"1667200102200\"\n  }\n}"
+						},
+						"url": {
+							"raw": "https://7ucpp7lkyl.execute-api.ap-southeast-1.amazonaws.com/dev/getpayment",
+							"protocol": "https",
+							"host": [
+								"7ucpp7lkyl",
+								"execute-api",
+								"ap-southeast-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"getpayment"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "health check",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/healthcheck",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"healthcheck"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Balance",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					},
+					{
+						"key": "access-token",
+						"value": "eyJraWQiOiJvMUV0cFdhYTlMZ21yb2thV05RcUErZE1UQkt0eFhcL0RFMmNJNVlENnp3bz0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI2ZjhmODIwMS04MWZlLTRhOGItOTE1MC0xZjk0YzgwODVkMDIiLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAuYXAtc291dGhlYXN0LTEuYW1hem9uYXdzLmNvbVwvYXAtc291dGhlYXN0LTFfUWIxUThUUHNVIiwiY2xpZW50X2lkIjoic2lrY25laTR0MmgzbnRrcWo1ZDQ5bHR2ciIsIm9yaWdpbl9qdGkiOiIwMDE5MDMwYS05MTMyLTRjMDAtYTNlNS0yMWZiZDdhYmNkMDUiLCJldmVudF9pZCI6IjI3YTBhZWIxLWQ4MWQtNDgzOS1hYTAwLWE0NGQ5ZTFiNTU3ZCIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoiYXdzLmNvZ25pdG8uc2lnbmluLnVzZXIuYWRtaW4iLCJhdXRoX3RpbWUiOjE2NjkxODU5NjMsImV4cCI6MTY3MDEzODU0OSwiaWF0IjoxNjcwMDUyMTQ5LCJqdGkiOiIzMWNjNmMxYy1lY2NjLTRjZmUtOTkzZS04N2FmNDg3ODk4YTciLCJ1c2VybmFtZSI6IjZmOGY4MjAxLTgxZmUtNGE4Yi05MTUwLTFmOTRjODA4NWQwMiJ9.wJMExBhTVMA2EPtsYS7W-DVWMq2bx4SsbJ1tkWRSDuMgk6GTxemxP0__Zh00rJKgqQzNEBJjFHGre5PS9HML5BGa3gXYX1uVlWXGEX635V817tq44RJcBueHLh9YH1DPkTIQQbvmQIve3mG3FD0iSl_MQQ6nBNBZjhKVNUSj-s7z6YD-cOKXNkjxbf1OLTK3zl6mRaq1Lwql4ZJB9LK0X8Jfxa-SAfDfzLHvN1HGlt-rTYJl_TZk5hdVGVRWdHuy1WeKLa5vRczSel6Oc-PeE71bErKVOiHBOUPOwENM31axxhEqEHdHKa2FkhpgEUxFx0KardSrZWVE5CDKTi8lUg"
+					},
+					{
+						"key": "x-api-key",
+						"value": "hutech_hackathon@123456"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"data\": {\n    \"acctNo\": \"045840070000012\"\n  },\n  \"request\": {\n    \"requestId\": \"a7ea23df-7468-439d-9b12-26eb4a760901\",\n    \"requestTime\": \"1667200102200\"\n  }\n}"
+				},
+				"url": {
+					"raw": "https://7ucpp7lkyl.execute-api.ap-southeast-1.amazonaws.com/dev/balance",
+					"protocol": "https",
+					"host": [
+						"7ucpp7lkyl",
+						"execute-api",
+						"ap-southeast-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"balance"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
