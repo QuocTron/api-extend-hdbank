@@ -8,8 +8,12 @@ import path from "path";
 dotenv.config();
 
 console.log("đầu app");
+console.log(path.dirname(__dirname));
 const app = express();
-app.use("/public", express.static(path.join(__dirname, "public/images")));
+app.use(
+  "/public",
+  express.static(path.join(path.dirname(__dirname), "src/public/images"))
+);
 app.use(express.json());
 app.use(dessrializeUser);
 app.use(router);
