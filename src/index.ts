@@ -11,7 +11,7 @@ console.log("đầu app");
 console.log(path.dirname(__dirname));
 const app = express();
 app.use(
-  "/public",
+  "/api/public",
   express.static(path.join(path.dirname(__dirname), "src/public/images"))
 );
 app.use(express.json());

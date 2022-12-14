@@ -5,3 +5,7 @@ export const createMeal = async (mealInput: CreateMealInput) => {
   console.log(mealInput);
   return MealModel.create(mealInput);
 };
+
+export const getAllMeal = async () => {
+  return MealModel.find().lean();
+};

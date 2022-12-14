@@ -3,7 +3,7 @@ import {
   getMealTicketHandler,
   paymentMealTicketHandler,
   useMealTicketHandler,
-} from "./../controller/mealTicket.controller";
+} from "../controller/mealTicket.controller";
 import { Router } from "express";
 import { createMealTicketHandler } from "../controller/mealTicket.controller";
 

@@ -1,8 +1,8 @@
 import express from "express";
 import user from "./user.routes";
 import transfer from "./transfer.routes";
-import meal from "./meal.route";
-import mealTicket from "./mealTicket.route";
+import meal from "./meal.routes";
+import mealTicket from "./mealTicket.routes";
 
 const router = express.Router();
 console.log("Vô route");

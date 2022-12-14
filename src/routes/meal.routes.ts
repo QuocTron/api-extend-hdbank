@@ -1,4 +1,7 @@
-import { createMealHandler } from "./../controller/meal.controller";
+import {
+  createMealHandler,
+  getAllMealHandler,
+} from "./../controller/meal.controller";
 import { Request } from "express";
 import multer from "multer";
 import { v4 as uuid } from "uuid";
@@ -17,7 +20,11 @@ const storage = multer.diskStorage({
     file: Express.Multer.File,
     callback: DestinationCallback
   ): void => {
-    callback(null, path.join(path.dirname(__dirname), `/public/images`));
+    console.log(__dirname);
+    callback(
+      null,
+      path.join(path.dirname(path.dirname(__dirname)), `src/public/images`)
+    );
   },
   filename: (
     req: Request,
@@ -33,4 +40,5 @@ const storage = multer.diskStorage({
 });
 
 router.post("/", multer({ storage }).single("meal"), createMealHandler);
+router.get("/", getAllMealHandler);
 export default router;
