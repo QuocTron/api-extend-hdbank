@@ -50,9 +50,9 @@ export async function createUserHandler(
 
 export async function updateUserHandler(req: Request, res: Response) {
   try {
-    const { credential, accountNo } = req.body;
+    const { phone, accountNo } = req.body;
     const user = await updateUser(
-      { credential },
+      { phone },
       {
         $set: {
           accountNo: accountNo,
