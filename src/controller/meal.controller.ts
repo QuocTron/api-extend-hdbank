@@ -1,3 +1,4 @@
+import { updateMeal } from "./../service/meal.service";
 import { MealDocument } from "./../model/meal.model";
 import { createMeal, getAllMeal } from "../service/meal.service";
 import { NextFunction, Request, Response } from "express";
@@ -30,5 +31,20 @@ export const getAllMealHandler = async (req: Request, res: Response) => {
     });
   } catch (error: any) {
     return res.status;
+  }
+};
+
+export const updateMealHandler = async (req: Request, res: Response) => {
+  try {
+    await updateMeal();
+    return res.status(200).json({
+      success: true,
+      message: "Update successfully",
+    });
+  } catch (error: any) {
+    return res.status(500).json({
+      success: false,
+      message: error.message,
+    });
   }
 };

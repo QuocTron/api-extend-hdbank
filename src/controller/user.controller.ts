@@ -142,10 +142,7 @@ export async function getAccountsTransferHandler(req: Request, res: Response) {
         success: false,
         message: "Could not find user",
       });
-    return res.status(200).json({
-      success: true,
-      userAccounts: user?.accountNoTransfers,
-    });
+    return res.status(200).json(user?.accountNoTransfers);
   } catch (error: any) {
     return res.status(500).json({
       success: false,

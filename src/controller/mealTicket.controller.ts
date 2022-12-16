@@ -16,10 +16,7 @@ export const createMealTicketHandler = async (
     const mealTicket = await createMealTicket({
       ...req.body,
     });
-    return res.status(200).json({
-      success: true,
-      mealTicket: mealTicket,
-    });
+    return res.status(200).json(mealTicket);
   } catch (error: any) {
     return res.status(500).json({
       success: false,
@@ -55,10 +52,7 @@ export const getMealTicketHandler = async (req: Request, res: Response) => {
   try {
     const { mealTicketId } = req.params;
     const mealTicket = await findMealTicket(mealTicketId);
-    return res.status(200).json({
-      success: true,
-      mealTicket: mealTicket,
-    });
+    return res.status(200).json(mealTicket);
   } catch (error: any) {
     return res.status(500).json({
       success: false,

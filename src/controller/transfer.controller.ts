@@ -8,10 +8,7 @@ export async function remitHandler(
 ) {
   try {
     const transfer = await remit(req.body);
-    return res.status(200).json({
-      success: true,
-      transfer,
-    });
+    return res.status(200).json(transfer);
   } catch (error: any) {
     return res.status(500).json({
       success: false,
@@ -24,10 +21,7 @@ export async function getTransfersUserHandler(req: Request, res: Response) {
   try {
     const { userIdSender } = req.params;
     const transfers = await getTransfersByUser({ userIdSender });
-    return res.status(200).json({
-      success: true,
-      transfers,
-    });
+    return res.status(200).json(transfers);
   } catch (error: any) {
     return res.status(500).json({
       success: false,

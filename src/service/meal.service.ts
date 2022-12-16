@@ -9,3 +9,12 @@ export const createMeal = async (mealInput: CreateMealInput) => {
 export const getAllMeal = async () => {
   return MealModel.find().lean();
 };
+
+export const updateMeal = async () => {
+  return MealModel.updateMany(
+    {},
+    {
+      quantity: 100,
+    }
+  );
+};

@@ -1,6 +1,7 @@
 import {
   createMealHandler,
   getAllMealHandler,
+  updateMealHandler,
 } from "./../controller/meal.controller";
 import { Request } from "express";
 import multer from "multer";
@@ -41,4 +42,5 @@ const storage = multer.diskStorage({
 
 router.post("/", multer({ storage }).single("meal"), createMealHandler);
 router.get("/", getAllMealHandler);
+router.put("/", updateMealHandler);
 export default router;
