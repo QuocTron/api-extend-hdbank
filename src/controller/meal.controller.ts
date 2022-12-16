@@ -25,10 +25,7 @@ export const createMealHandler = async (
 export const getAllMealHandler = async (req: Request, res: Response) => {
   try {
     const meals = await getAllMeal();
-    return res.status(200).json({
-      success: true,
-      meals: meals,
-    });
+    return res.status(200).json(meals);
   } catch (error: any) {
     return res.status;
   }
