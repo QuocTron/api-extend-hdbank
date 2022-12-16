@@ -1,4 +1,4 @@
-import { FilterQuery } from "mongoose";
+import { FilterQuery, QueryOptions } from "mongoose";
 import UserModel, { UserDocument } from "../model/user.model";
 
 export function createUser(input: Partial<UserDocument>) {
@@ -19,6 +19,13 @@ export function findUser(query: FilterQuery<UserDocument>) {
       select: "fullName accountNo",
     },
   ]);
+}
+
+export function updateUser(
+  filter: FilterQuery<UserDocument>,
+  update: QueryOptions<UserDocument>
+) {
+  return UserModel.findOneAndUpdate(filter, update, { new: true });
 }
 export function findUserByAccountNo(accountNo: string) {
   return UserModel.findOne({ accountNo });

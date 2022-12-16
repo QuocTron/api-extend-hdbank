@@ -15,6 +15,7 @@ import {
   findUserById,
   getAccountsTransfer,
   saveAccountTransfer,
+  updateUser,
 } from "../service/user.service";
 import sendEmail from "../utils/mailer";
 import log from "../utils/logger";
@@ -47,6 +48,23 @@ export async function createUserHandler(
   }
 }
 
+export async function updateUserHandler(req: Request, res: Response) {
+  try {
+    const { credential, accountNo } = req.body;
+    const user = await updateUser(
+      { credential },
+      {
+        $set: {
+          accountNo: accountNo,
+        },
+      }
+    );
+    if (!user) return res.status(404).json("Could not find user");
+    return res.status(200).json("Update successfully");
+  } catch (error: any) {
+    return res.status(500).json(error.message);
+  }
+}
 export async function forgotPasswordHandler(
   req: Request<{}, {}, ForgotPasswordInput>,
   res: Response

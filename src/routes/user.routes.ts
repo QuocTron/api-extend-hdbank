@@ -16,6 +16,7 @@ import {
   getUserHandler,
   resetPasswordHandler,
   saveAccountTransferHandler,
+  updateUserHandler,
 } from "../controller/user.controller";
 import requireUser from "../middleware/requireUser";
 import { validateInputUser } from "../middleware/userValidation.middleware";
@@ -27,6 +28,7 @@ router.post(
   validateInputUser,
   createUserHandler
 );
+router.put("/", updateUserHandler);
 
 router.post(
   "/forgotpassword",
