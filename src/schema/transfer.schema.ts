@@ -2,15 +2,10 @@ import { number, object, string, TypeOf, ZodType } from "zod";
 
 export const remitSchema = object({
   body: object({
-    userIdSender: string({
-      required_error: "UserIdSend is required",
-    }),
     accountSender: string({
       required_error: "AccountSender is required",
     }),
-    userIdReceiver: string({
-      required_error: "UserIdReceiver is required",
-    }),
+
     accountReceiver: string({
       required_error: "AccountRevciever is required",
     }),

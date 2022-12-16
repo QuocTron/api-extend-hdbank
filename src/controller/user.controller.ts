@@ -52,7 +52,7 @@ export async function updateUserHandler(req: Request, res: Response) {
   try {
     const { phone, accountNo } = req.body;
     const user = await updateUser(
-      { phone },
+      { phone, accountNo: null },
       {
         $set: {
           accountNo: accountNo,
