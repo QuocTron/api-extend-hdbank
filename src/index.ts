@@ -15,7 +15,7 @@ app.use(
 app.use(express.json());
 app.use(dessrializeUser);
 app.use(router);
-
+8
 const port = process.env.PORT || 3001;
 app.listen(port, () => {
   log.info(`App started at http://localhost:${port}`);
